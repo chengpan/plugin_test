@@ -8,9 +8,12 @@ TSPluginInit(int argc , const char *argv[] )
   int i;
   for (i = 0; i < argc; i++)
   {
-      DEBUG_INFO("arg %d: %s", i, argv[i]);
-	  printf("[stdout] arg %d: %s", i, argv[i]);
+	DEBUG_INFO("arg %d: %s", i, argv[i]);
+	printf("[stdout] arg %d: %s", i, argv[i]);//this won't be shown DONOT know why
   }
+  
+  const char *ts_version = TSTrafficServerVersionGet();
+  DEBUG_INFO("ats version info: ", ts_version);
 
   TSPluginRegistrationInfo info;
   info.plugin_name   = "hello-fucking-world";
