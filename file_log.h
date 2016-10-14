@@ -3,7 +3,7 @@
 
 #include <errno.h>
 
-//change USE_DEBUG to 1 if you want to close logging
+//change USE_DEBUG to 0 if you want to close logging
 #define USE_DEBUG 1
 extern int log2file(const char *format, ...);
 #define LOGFILE_PATH "/tmp/ats620_debug.log"

@@ -2,6 +2,9 @@
 #include<string.h>
 #include<stdarg.h>
 #include<stdlib.h>
+#include<time.h>
+#include<sys/types.h>
+#include<unistd.h>
 #include "file_log.h"
 
 int log2file(const char *fmt, ...)
@@ -16,6 +19,9 @@ int log2file(const char *fmt, ...)
             exit(1);
         }
     }
+
+    time_t secs_epoch = time(NULL);
+    fprintf(fp, "\n%lu :%s", (unsigned long)getpid(), ctime(&secs_epoch));
 
     int cnt;
     va_list argptr;
