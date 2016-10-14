@@ -8,7 +8,8 @@ TSPluginInit(int argc , const char *argv[] )
   int i;
   for (i = 0; i < argc; i++)
   {
-      DEBUG_INFO("arg %d: %s", i, argv[i]);  
+      DEBUG_INFO("arg %d: %s", i, argv[i]);
+	  printf("[stdout] arg %d: %s", i, argv[i]);
   }
 
   TSPluginRegistrationInfo info;
