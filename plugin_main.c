@@ -19,6 +19,7 @@ TSPluginInit(int argc , const char *argv[] )
   if (TSPluginRegister(&info) != TS_SUCCESS) {
     TSError("[hello-world] Plugin registration failed.");
   }
-
+    
+  TSError("error-hello,   Hello World!\n");
   TSDebug("debug-hello", "Hello World!\n");
 }
