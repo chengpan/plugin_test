@@ -13,7 +13,7 @@ TSPluginInit(int argc , const char *argv[] )
   }
   
   const char *ts_version = TSTrafficServerVersionGet();
-  DEBUG_INFO("ats version info: ", ts_version);
+  DEBUG_INFO("ats version info: %s", ts_version);
 
   TSPluginRegistrationInfo info;
   info.plugin_name   = "hello-fucking-world";
